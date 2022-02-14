@@ -1,0 +1,3 @@
+DATABASE_URI=mongodb+srv://dev_user:YrducNBXEbtVFr7@cluster0.nf6qa.mongodb.net/meycm_dev?retryWrites=true&w=majority
+
+

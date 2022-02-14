@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  backend_dev:
+    environment:
+      - VIRTUAL_HOST=dashboard.meycmalaysia.com
+      - LETSENCRYPT_HOST=dashboard.meycmalaysia.com
+      - LETSENCRYPT_EMAIL=hung.workspace@gmail.com
+    ports:
+      - '1338:1337'
+      #1338 for production
+    build:
+      context: my-project
+      dockerfile: Dockerfile
+      args:
+        REQUIREMENTS: "requirements_pro.txt"
+    command: yarn develop
+    volumes:
+      - ./my-project/:/usr/src/app
+      - /usr/src/app/node_modules
+      # - /usr/src/app/.cache
+    # env_file:
+
+networks:
+  default:
+    external:
+      name: nginx-proxy

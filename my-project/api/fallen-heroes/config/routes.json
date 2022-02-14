@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/fallen-heroes",
+      "handler": "fallen-heroes.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fallen-heroes/count",
+      "handler": "fallen-heroes.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fallen-heroes/:id",
+      "handler": "fallen-heroes.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/fallen-heroes",
+      "handler": "fallen-heroes.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/fallen-heroes/:id",
+      "handler": "fallen-heroes.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/fallen-heroes/:id",
+      "handler": "fallen-heroes.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

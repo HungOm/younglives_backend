@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fallenheroes",
+  "info": {
+    "name": "FallenHeroes",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "maxLength": 30,
+      "minLength": 2,
+      "required": true
+    },
+    "profileImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "age": {
+      "type": "integer"
+    },
+    "DoD": {
+      "type": "date"
+    },
+    "causeOfDeath": {
+      "type": "string"
+    },
+    "nameInMyanmmar": {
+      "type": "text",
+      "required": true
+    },
+    "location": {
+      "type": "text"
+    },
+    "lastword": {
+      "type": "text"
+    }
+  }
+}

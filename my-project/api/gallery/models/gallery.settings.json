@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gallery",
+  "info": {
+    "name": "Gallery"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "caption": {
+      "type": "text",
+      "required": true,
+      "minLength": 10
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "datetime": {
+      "type": "datetime",
+      "required": true
+    }
+  }
+}
